@@ -1,0 +1,10 @@
+Category,Count,Fraction of PPI
+PPI total,31004,1.000
+Both (PPI + significant GI),2442,0.079
+PPI + measured non-significant GI,6555,0.211
+PPI only (not in SGA),22007,0.710
+Significant GI only (no PPI),1233608,N/A
+Both: within-cluster,1623,0.665
+Both: between-cluster,819,0.335
+Both: positive GI,1352,0.554
+Both: negative GI,1090,0.446
