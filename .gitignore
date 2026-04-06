@@ -1,0 +1,11 @@
+# Large data files
+data/*.zip
+data/*.rar
+data/Interactome_Data/*.cys
+data/SGA_*/
+# Python cache
+__pycache__/
+*.pyc
+.DS_Store
+# Analysis outputs (keep scripts, not raw output data)
+analysis/*.pkl
