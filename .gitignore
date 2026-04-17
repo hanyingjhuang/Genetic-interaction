@@ -1,11 +1,49 @@
-# Large data files
+# ── Raw / downloaded data (large, cite source databases) ──
+data/SGA/
+data/SGA_*/
 data/*.zip
 data/*.rar
-data/Interactome_Data/*.cys
-data/SGA_*/
-# Python cache
+data/Interactome_Data/
+
+# ── Build caches and intermediates ──
+build/external_data_cache/
+build/go_data/
+build/*.pkl
+build/*.csv
+build/tmp*
+build/.mplconfig/
+
+# ── Python cache ──
 __pycache__/
 *.pyc
+*.pyo
+
+# ── OS files ──
 .DS_Store
-# Analysis outputs (keep scripts, not raw output data)
-analysis/*.pkl
+Thumbs.db
+
+# ── Figure intermediates ──
+figures/*.html
+figures/*.json
+figures/*.png
+figures/*.svg
+figures/thumbs/
+figures/v4[0-9]_panels/
+figures/v4[0-9]_composites/
+figures/v50_panels/
+figures/v50_composites/
+figures/archives/
+
+# ── Old manuscript versions (keep only final v48) ──
+manuscripts/2026.04.06_*
+manuscripts/2026.04.07_*
+manuscripts/2026.04.08_*
+manuscripts/2026.04.09_*
+manuscripts/2026.04.11_*
+manuscripts/2026.04.12_*
+manuscripts/2026.04.16_*
+manuscripts/2026.04.17_GI_PPI_v4[0-7].docx
+
+# ── Old analysis/paper directories (superseded by build/) ──
+analysis/
+paper/
