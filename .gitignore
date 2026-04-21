@@ -1,49 +1,159 @@
-# ── Raw / downloaded data (large, cite source databases) ──
-data/SGA/
-data/SGA_*/
-data/*.zip
-data/*.rar
-data/Interactome_Data/
+# ─────────────────────────────────────────────
+# Synced from ~/.claude/gitignore.template
+# Edit the template and re-sync; do not edit this block.
+# ─────────────────────────────────────────────
 
-# ── Build caches and intermediates ──
-build/external_data_cache/
-build/go_data/
-build/*.pkl
-build/*.csv
-build/tmp*
-build/.mplconfig/
-
-# ── Python cache ──
-__pycache__/
-*.pyc
-*.pyo
-
-# ── OS files ──
+# ── Standard OS / editor noise ─────────────────────────────────
 .DS_Store
+._*
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+.fseventsd
+Icon?
 Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
 
-# ── Figure intermediates ──
-figures/*.html
-figures/*.json
+# ── iCloud sync artifacts ──────────────────────────────────────
+*.icloud
+.icloud*
+
+# ── Microsoft Office / editor lock and temp files ──────────────
+~$*
+*.tmp
+*.bak
+
+# ── Python ─────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+
+# ── R ──────────────────────────────────────────────────────────
+.Rhistory
+.RData
+.Rproj.user/
+
+# ── Secrets ────────────────────────────────────────────────────
+.env
+.env.*
+*.key
+*.pem
+credentials.json
+*_token*
+*_secret*
+
+# ── Agent conversation memory ──────────────────────────────────
+memory/
+.claude/
+
+# ── Journal submission packages ────────────────────────────────
+submission/
+!submission/public/
+
+# ── Manuscripts ────────────────────────────────────────────────
+manuscripts/
+!manuscripts/accepted/
+*.docx
+*.pdf
+
+# ── Figure outputs ─────────────────────────────────────────────
 figures/*.png
 figures/*.svg
-figures/thumbs/
-figures/v4[0-9]_panels/
-figures/v4[0-9]_composites/
-figures/v50_panels/
-figures/v50_composites/
+figures/*.pdf
+figures/*.html
+figures/*.eps
+figures/*.tiff
 figures/archives/
+figures/v[0-9]*_panels/
+figures/v[0-9]*_composites/
+figures/thumbs/
 
-# ── Old manuscript versions (keep only final v48) ──
-manuscripts/2026.04.06_*
-manuscripts/2026.04.07_*
-manuscripts/2026.04.08_*
-manuscripts/2026.04.09_*
-manuscripts/2026.04.11_*
-manuscripts/2026.04.12_*
-manuscripts/2026.04.16_*
-manuscripts/2026.04.17_GI_PPI_v4[0-7].docx
+# ── Archives of any kind ───────────────────────────────────────
+archive/
+archives/
+_archive/
+old/
+_old/
+**/archive/
+**/archives/
+**/_archive/
+**/old/
+**/_old/
 
-# ── Old analysis/paper directories (superseded by build/) ──
-analysis/
-paper/
+# ── Internal review / critique / memo notes ────────────────────
+notes/codex_critique_*
+notes/*review*
+notes/*critique*
+notes/*_arrangement*
+notes/*_comments*
+notes/*_memo*
+notes/*_feedback*
+
+# ── Raw / large data dumps ─────────────────────────────────────
+data/raw/
+data/SGA*/
+data/Interactome_Data/
+data/*.zip
+data/*.rar
+data/*.tar
+data/*.tar.gz
+data/*.tgz
+data/*.gz
+data/*.h5ad
+data/*.loom
+data/*.mtx
+data/*.rds
+data/*.bam
+data/*.sra
+data/*.fastq
+data/*.fastq.gz
+data/*.fq
+data/*.fq.gz
+
+# ── Build caches and intermediates ─────────────────────────────
+build/external_data_cache/
+build/*.pkl
+build/tmp/
+build/tmp*/
+build/.mplconfig/
+build/go_data/
+build/.*_cache.json
+
+# ─────────────────────────────────────────────
+# Project-specific (Genetic-interaction)
+# ─────────────────────────────────────────────
+# 200+ legacy scripts under build/ are excluded by default. Only the
+# small data-generating subset copied into github_scripts/ is pushed.
+build/
+figures/
+manuscripts/
+notes/
+submission/
+figures/archives/
+figures/bottleneck_explanatory/
+
+# ─────────────────────────────────────────────
+# Active-script allow-list (synced from github_scripts/MANIFEST.txt)
+# ─────────────────────────────────────────────
+!README.md
+!.gitignore
+!github_scripts/
+!github_scripts/MANIFEST.txt
+!github_scripts/01_load_and_preprocess.py
+!github_scripts/02_overlap_analysis.py
+!github_scripts/03_correlation_analysis.py
+!github_scripts/10_deeper_analysis.py
+!github_scripts/199_rebuild_master_4class.py
+!github_scripts/205_qc_v66.py
+!github_scripts/outputs/
+!github_scripts/outputs/*.csv
+!github_scripts/outputs/*.parquet

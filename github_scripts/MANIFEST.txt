@@ -1,0 +1,36 @@
+# Active data-generating scripts for this repository.
+# One path per line, relative to this directory.
+# Policy: ~/.claude/CLAUDE.md → "GitHub Push Policy".
+#
+# Confirmed data-only (no matplotlib imports, no savefig calls):
+01_load_and_preprocess.py
+02_overlap_analysis.py
+03_correlation_analysis.py
+10_deeper_analysis.py
+199_rebuild_master_4class.py
+205_qc_v66.py
+
+# Excluded as figure-only (no data outputs):
+#   build/04_figures.py, 11_figures_v3.py, ..., all figN_* and figs_vN_* scripts,
+#   200_fig3_reanalysis_v66.py, 201_figs_v66.py, 202_supp_figs_v66.py,
+#   206_fig3_v67.py, 207_compose_fig3_v67.py, 19_literature_comparison.py
+#
+# Excluded as manuscript/document builders:
+#   05_write_paper.py, 06-17 write_paper_v*.py iterations,
+#   100_write_manuscript_v43.py through 211_manuscript_v68.py and variants,
+#   104_human_supplementary_v49.py, 156_supplementary_v60.py through
+#   212_supplementary_v68.py, all compliance_v*.py, caption_fix, cleanup,
+#   strip_titles, revisions_v68, fix_captions_and_refs, update_manuscript
+#
+# Excluded as superseded one-offs:
+#   _migrate_resources_paths.py, _s2_v50_temp.py, patch_abstract_v20.py,
+#   rebuild_html_v7.py, v22_analysis_utils.py, 118_test_model2.py
+#
+# Potentially includable (need user confirmation — produce data CSVs but
+# were part of the iterative late-stage analysis that later became the
+# v66-v68 consolidated pipeline):
+#   128_mechanistic_model.py, 129_bottleneck_index.py, 130_hpo_hierarchy.py,
+#   131_hpo_subtype_enrichment.py, 132_depmap_architecture.py,
+#   145_bottleneck_explanatory.py, 146_bottleneck_explanatory_v2.py,
+#   147_bottleneck_roc.py, 148_disease_ml_fig6.py, 149_cancer_ml_fig6.py,
+#   150_cancer_ml_interaction.py
